@@ -39,6 +39,8 @@
             padding: 0.3rem;
             border-radius: .25rem;
             transition: all 0.3s;
+            min-width: 2rem;
+            text-align: center;
         }
 
             .fa:hover {
@@ -68,7 +70,7 @@
 
         <div class="d-flex">
             <div class="p-1">
-                <a href="javascript:void(0)" aria-label="music" id="play"><span class="fa fa-volume-up"></span></a>
+                <a href="javascript:void(0)" aria-label="music" id="play"><span class="fa fa-volume-off"></span></a>
             </div>
             <div class="p-1">
                 <a href="https://www.facebook.com/websparks" aria-label="facebook" target="_blank"><span class="fa fa-facebook-square"></span></a>
@@ -119,6 +121,12 @@
                     if ($(ele).attr('step') === nextStep) {
                         $(ele).removeClass('d-none');
                         audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
+
+                        if($('#play span').hasClass('fa-volume-off')) {
+                            $('#play span').removeClass('fa-volume-off');
+                            $('#play span').addClass('fa-volume-up');
+                        }
+
                         audioBg.play();
                         setTimeout(() => {
                             audioElement.play();
@@ -128,12 +136,23 @@
             });
 
             $('#play').click(function() {
-                var currentStep = parseInt($('.louhei_sg:not(".d-none")').attr('step'));
-                if(currentStep == 0) {
-                    audioBg.play();
+                if($('#play span').hasClass('fa-volume-off')) {
+                    $('#play span').removeClass('fa-volume-off');
+                    $('#play span').addClass('fa-volume-up');
+
+                    var currentStep = parseInt($('.louhei_sg:not(".d-none")').attr('step'));
+                    if(currentStep == 0) {
+                        audioBg.play();
+                    } else {
+                        audioBg.play();
+                        audioElement.play();
+                    }
                 } else {
-                    audioBg.play();
-                    audioElement.play();
+                    $('#play span').addClass('fa-volume-off');
+                    $('#play span').removeClass('fa-volume-up');
+
+                    audioBg.pause();
+                    audioElement.pause();
                 }
             });
         });

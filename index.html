@@ -133,6 +133,7 @@
     </script>
     <script>
         $(document).ready(function () {
+            var huatCounter = 1, maxHuat = 3;
             var maxStep = 12;
             var audioBg = new Audio();
             audioBg.volume = '0.2';
@@ -156,7 +157,17 @@
 
                     if ($(ele).attr('step') === nextStep) {
                         $(ele).removeClass('d-none');
-                        audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
+                        if(nextStep === '11') {
+                            audioElement.src = 'assets/voice/ws_huat.mp3';
+                            audioElement.addEventListener("ended", function() {
+                                if(huatCounter < maxHuat) {
+                                    audioElement.play();
+                                }
+                                huatCounter++;
+                            }, true);
+                        } else {
+                            audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
+                        }
 
                         if($('#play span').hasClass('fa-volume-off')) {
                             $('#play span').removeClass('fa-volume-off');
@@ -189,6 +200,7 @@
 
                     audioBg.pause();
                     audioElement.pause();
+                    huatCounter = 1;
                 }
             });
         });

@@ -215,6 +215,9 @@
                             $('#lucky_draw span').html(luckyNumber);
                         } else {
                             audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
+                            $('iframe').contents().find('video').each(function () {
+                                this.play();
+                            });
                             setTimeout(() => {
                                 audioElement.play();
                             }, 1500);

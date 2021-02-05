@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Specially Thanks Mindy for the design! -->
-    <!-- Specially Thanks Mindy for the design! -->
+    <!-- Haw Jeh who came up the idea and code it -->
+    <!-- Thanks Chee Chiu for supporting the idea -->
+    <!-- Specially thanks Mindy for the design! -->
+    <!-- Wish everyone Happy Chinese New Year 2021, Great Year Ahead -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -157,9 +159,6 @@
             </div>
         </div>
         <div class="d-flex flex-column align-items-center">
-            <div class="p-1 d-none" id="lucky_wrapper">
-                <a href="javascript:void(0)" aria-label="number" id="lucky_random"><span class="fa fa-usd"></span></a>
-            </div>
             <p class="d-none" id="lucky_draw" style="padding: 0.5rem !important;">Your Lucky Number
                 is<br /><span>1234</span></p>
         </div>
@@ -219,7 +218,9 @@
                             }, true);
                             audioElement.play();
 
-                            $('#lucky_wrapper').removeClass('d-none');
+                            $('#lucky_draw').removeClass('d-none');
+                            var luckyNumber = Math.floor(1000 + Math.random() * 9000);
+                            $('#lucky_draw span').html(luckyNumber);
                         } else {
                             audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
                             setTimeout(() => {
@@ -251,12 +252,6 @@
                     huatCounter = 1;
                 }
             });
-
-            $('#lucky_random').click(function () {
-                $('#lucky_draw').removeClass('d-none');
-                var luckyNumber = Math.floor(1000 + Math.random() * 9000);
-                $('#lucky_draw span').html(luckyNumber);
-            })
         });
     </script>
 

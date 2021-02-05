@@ -121,8 +121,8 @@
         <img src="assets/img/ws_8.gif" step="8" class="louhei_sg img-fluid mx-auto d-none" alt="Jin Yin Man Wu!" />
         <img src="assets/img/ws_9.gif" step="9" class="louhei_sg img-fluid mx-auto d-none" alt="Huang Jin Man Di!" />
         <img src="assets/img/ws_10.gif" step="10" class="louhei_sg img-fluid mx-auto d-none" alt="Tian Tian Mi Mi!" />
-        <img src="assets/img/ws_0.png" step="11" class="louhei_sg img-fluid mx-auto d-none"
-            alt="HUAT AH!" />
+        <img src="assets/img/ws_11.gif" step="11" class="louhei_sg img-fluid mx-auto d-none" alt="Ready to Lou Hei!" />
+        <img src="assets/img/ws_12.gif" step="12" class="louhei_sg img-fluid mx-auto d-none" alt="HUAT AH!" />
 
         <div class="d-flex">
             <div class="p-1">
@@ -154,7 +154,7 @@
     <script>
         $(document).ready(function () {
             var huatCounter = 1, maxHuat = 3;
-            var maxStep = 11;
+            var maxStep = 12;
             var audioBg = new Audio();
             audioBg.volume = '0.1';
             audioBg.src= 'assets/voice/ws_bg.mp3';
@@ -184,7 +184,8 @@
                             $('#play span').addClass('fa-volume-up');
                         }
 
-                        if(nextStep === '11') {
+                        if(nextStep === '11') return;
+                        if(nextStep === '12') {
                             audioElement.src = 'assets/voice/ws_huat.mp3';
                             audioElement.addEventListener("ended", function() {
                                 if(huatCounter < maxHuat) {

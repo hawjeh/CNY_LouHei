@@ -116,6 +116,7 @@
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5C4R24" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
     </noscript>
+    <iframe src="assets/voice/ws_bg.mp3" allow="autoplay" class="d-none"></iframe>
     <div class="d-flex flex-column justify-content-center align-items-center pt-3">
         <img src="assets/img/ws_tap.gif" step="0" id="tapme" class="louhei_sg position-absolute img-fluid mx-auto"
             alt="Tap Me!">
@@ -135,7 +136,7 @@
 
         <div class="d-flex">
             <div class="p-1">
-                <a href="javascript:void(0)" aria-label="music" id="play"><span class="fa fa-volume-off"></span></a>
+                <a href="javascript:void(0)" aria-label="music" id="play"><span class="fa fa-volume-up"></span></a>
             </div>
             <div class="p-1">
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.louhei.sg" aria-label="facebook"
@@ -178,16 +179,8 @@
             var huatCounter = 1,
                 maxHuat = 3;
             var maxStep = 12;
-            var audioBg = new Audio();
-            audioBg.volume = '0.1';
-            audioBg.src = 'assets/voice/ws_bg.mp3';
-            audioBg.addEventListener("ended", function () {
-                audioBg.play();
-            }, true);
-
             var audioElement = new Audio();
             audioElement.volume = '1.0';
-
 
             $('.louhei_sg').click(function () {
                 var currentStep = parseInt($(this).attr('step'));
@@ -200,7 +193,6 @@
 
                     if ($(ele).attr('step') === nextStep) {
                         $(ele).removeClass('d-none');
-                        audioBg.play();
 
                         if ($('#play span').hasClass('fa-volume-off')) {
                             $('#play span').removeClass('fa-volume-off');
@@ -235,22 +227,23 @@
                 if ($('#play span').hasClass('fa-volume-off')) {
                     $('#play span').removeClass('fa-volume-off');
                     $('#play span').addClass('fa-volume-up');
-
-                    var currentStep = parseInt($('.louhei_sg:not(".d-none")').attr('step'));
-                    if (currentStep == 0) {
-                        audioBg.play();
-                    } else {
-                        audioBg.play();
-                        audioElement.play();
-                    }
+                    $('iframe').contents().find('video').each(function () {
+                        this.play();
+                    });
                 } else {
                     $('#play span').addClass('fa-volume-off');
                     $('#play span').removeClass('fa-volume-up');
 
-                    audioBg.pause();
-                    audioElement.pause();
+                    $('iframe').contents().find('video').each(function () {
+                        this.pause();
+                    });
                     huatCounter = 1;
                 }
+            });
+
+            $('iframe').contents().find('video').each(function () {
+                this.loop = true;
+                this.volume = 0.2;
             });
         });
     </script>

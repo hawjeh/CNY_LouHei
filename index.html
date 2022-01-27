@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,36 +21,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <title>Chinese New Year 2022!</title>
     <style>
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-        }
-
         body {
             background-color: #c83838;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23de5959' fill-opacity='0.4' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
         }
 
-        img,
-        .fa {
-            cursor: pointer;
+        .social li a {
+            background: #fd9500;
         }
 
-        img:hover {
-            -webkit-animation: cursor 1000ms infinite;
-            animation: cursor 1000ms infinite;
+        .social li a:hover {
+            background: linear-gradient(to bottom right, #fd4d00, #fd9b00);
         }
 
-        .p-1 {
-            padding: .2rem !important;
-            margin: .6rem !important;
-            border-radius: .25rem !important;
-        }
-
-        .fa,
         #lucky_draw {
             background: linear-gradient(#fd4d00, #fd9b00);
             font-size: 1.5rem;
@@ -88,23 +74,6 @@
             font-size: 2.5rem;
         }
 
-        .fa:hover {
-            background: #fd9b00;
-        }
-
-        .btn-light {
-            border: 0;
-            background-color: rgba(0, 0, 0, 0.2);
-            color: white;
-        }
-
-        #tapme {
-            height: 100%;
-            width: 100%;
-            max-height: 250px;
-            max-width: 250px;
-        }
-
         .flip-box {
             background-color: transparent;
             width: 300px;
@@ -127,7 +96,6 @@
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden;
-            /* Safari */
             backface-visibility: hidden;
         }
 
@@ -140,19 +108,20 @@
             transform: rotateY(180deg);
         }
 
-        @media (max-width: 425px) {
-            #tapme {
-                max-height: 150px;
-                max-width: 150px;
-                margin-top: -15px;
-            }
+        .flip-box-all {
+            margin-bottom: 1.8rem;
+            position: absolute;
+            bottom: 20px;
+            background-image: linear-gradient(0deg, #c83838, transparent);
+        }
 
+        @media (max-width: 425px) {
             .flip-box {
                 width: 200px;
                 height: 100px;
             }
 
-            #new_lucky_draw_wrapper p{
+            #new_lucky_draw_wrapper p {
                 font-size: 0.8rem;
             }
 
@@ -162,7 +131,7 @@
 
             #new_lucky_draw_wrapper,
             #new_lucky_draw_wrapper_back {
-                background-image: url('./assets/img/lucky_number/button_small.png');
+                background-image: url('assets/img/lucky_number/button_small.png');
                 width: 100%;
                 height: 100%;
                 background-size: 100%;
@@ -178,7 +147,6 @@
             }
         }
     </style>
-
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -204,75 +172,82 @@
             style="display:none;visibility:hidden"></iframe>
     </noscript>
     <iframe src="assets/voice/ws_bg.mp3" allow="autoplay" class="d-none"></iframe>
-    <div class="d-flex flex-column justify-content-center align-items-center pt-3">
-        <img src="assets/img/ws_tap.gif" step="0" id="tapme" class="louhei_sg position-absolute img-fluid mx-auto"
-            alt="Tap Me!">
-        <img src="assets/img/ws_0.png" step="0" class="louhei_sg img-fluid mx-auto" alt="Happy Chinese New Year!">
-        <img src="assets/img/ws_1.gif" step="1" class="louhei_sg img-fluid mx-auto d-none" alt="Nian Nian You Yu!" />
-        <img src="assets/img/ws_2.gif" step="2" class="louhei_sg img-fluid mx-auto d-none" alt="Da Ji Da Li!" />
-        <img src="assets/img/ws_3.gif" step="3" class="louhei_sg img-fluid mx-auto d-none" alt="Zhao Cai Jin Bao!" />
-        <img src="assets/img/ws_4.gif" step="4" class="louhei_sg img-fluid mx-auto d-none" alt="Cai Yuan Guang Jin!" />
-        <img src="assets/img/ws_5.gif" step="5" class="louhei_sg img-fluid mx-auto d-none" alt="Hong Yun Dang Tou!" />
-        <img src="assets/img/ws_6.gif" step="6" class="louhei_sg img-fluid mx-auto d-none" alt="Qing Chun Yong Zhu!" />
-        <img src="assets/img/ws_7.gif" step="7" class="louhei_sg img-fluid mx-auto d-none" alt="Bu Bu Gao Sheng!" />
-        <img src="assets/img/ws_8.gif" step="8" class="louhei_sg img-fluid mx-auto d-none" alt="Jin Yin Man Wu!" />
-        <img src="assets/img/ws_9.gif" step="9" class="louhei_sg img-fluid mx-auto d-none" alt="Huang Jin Man Di!" />
-        <img src="assets/img/ws_10.gif" step="10" class="louhei_sg img-fluid mx-auto d-none" alt="Tian Tian Mi Mi!" />
-        <img src="assets/img/ws_11.gif" step="11" class="louhei_sg img-fluid mx-auto d-none" alt="Ready to Lou Hei!" />
-        <img src="assets/img/ws_12.gif" step="12" class="louhei_sg img-fluid mx-auto d-none" alt="HUAT AH!" />
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="social">
+                    <li>
+                        <a href="javascript:void(0)" aria-label="music" id="play" class="play"><span
+                                class="fas"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.louhei.sg"
+                            aria-label="facebook" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/intent/tweet?url=https://www.louhei.sg&via=Websparks"
+                            aria-label="twitter" target="_blank"><span class="fab fa-twitter"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.louhei.sg"
+                            aria-label="linkedin" target="_blank"><span class="fab fa-linkedin-in"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/websparkspteltd" aria-label="instagram" target="_blank"><span
+                                class="fab fa-instagram"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/websparkstv" aria-label="youtube" target="_blank"><span
+                                class="fab fa-youtube"></span></a>
+                    </li>
+                </ul>
+                <div class="map" style="max-height:90vh">
+                    <img src="assets/img/ws_tap.gif" step="0" id="tapme" class="louhei_sg position-absolute"
+                        alt="Tap Me!">
+                    <img src="assets/img/ws_0.png" step="0" class="louhei_sg" alt="Happy Chinese New Year!">
+                    <img src="assets/img/ws_1.gif" step="1" class="louhei_sg d-none" alt="Nian Nian You Yu!" />
+                    <img src="assets/img/ws_2.gif" step="2" class="louhei_sg d-none" alt="Da Ji Da Li!" />
+                    <img src="assets/img/ws_3.gif" step="3" class="louhei_sg d-none" alt="Zhao Cai Jin Bao!" />
+                    <img src="assets/img/ws_4.gif" step="4" class="louhei_sg d-none" alt="Cai Yuan Guang Jin!" />
+                    <img src="assets/img/ws_5.gif" step="5" class="louhei_sg d-none" alt="Hong Yun Dang Tou!" />
+                    <img src="assets/img/ws_6.gif" step="6" class="louhei_sg d-none" alt="Qing Chun Yong Zhu!" />
+                    <img src="assets/img/ws_7.gif" step="7" class="louhei_sg d-none" alt="Bu Bu Gao Sheng!" />
+                    <img src="assets/img/ws_8.gif" step="8" class="louhei_sg d-none" alt="Jin Yin Man Wu!" />
+                    <img src="assets/img/ws_9.gif" step="9" class="louhei_sg d-none" alt="Huang Jin Man Di!" />
+                    <img src="assets/img/ws_10.gif" step="10" class="louhei_sg d-none" alt="Tian Tian Mi Mi!" />
+                    <img src="assets/img/ws_11.gif" step="11" class="louhei_sg d-none" alt="Ready to Lou Hei!" />
+                    <img src="assets/img/ws_12.gif" step="12" class="louhei_sg d-none" alt="HUAT AH!" />
 
-        <div class="d-flex">
-            <div class="p-1">
-                <a href="javascript:void(0)" aria-label="music" id="play"><span class="fa fa-volume-up"></span></a>
-            </div>
-            <div class="p-1">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.louhei.sg" aria-label="facebook"
-                    target="_blank"><span class="fa fa-facebook-square"></span></a>
-            </div>
-            <div class="p-1">
-                <a href="https://www.twitter.com/intent/tweet?url=https://www.louhei.sg&via=Websparks"
-                    aria-label="twitter" target="_blank"><span class="fa fa-twitter-square"></span></a>
-            </div>
-            <div class="p-1">
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.louhei.sg"
-                    aria-label="linkedin" target="_blank"><span class="fa fa-linkedin-square"></span></a>
-            </div>
-            <div class="p-1">
-                <a href="https://www.instagram.com/websparkspteltd" aria-label="twitter" target="_blank"><span
-                        class="fa fa-instagram"></span></a>
-            </div>
-            <div class="p-1">
-                <a href="https://www.youtube.com/user/websparkstv" aria-label="youtube" target="_blank"><span
-                        class="fa fa-youtube-play"></span></a>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex flex-row justify-content-center w-100">
-        <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-1.png" />
-        <div class="d-flex flex-column align-items-center flip_mascot">
-            <div class="flip-box">
-                <div class="flip-box-inner d-none">
-                    <div class="flip-box-front">
-                        <div id="new_lucky_draw_wrapper">
-                            <p>CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
+                    <div class="justify-content-center w-100 flip-box-all d-none">
+                        <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-1.png" />
+                        <div class="d-flex flex-column align-items-center flip_mascot">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <div id="new_lucky_draw_wrapper">
+                                            <p>CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
+                                        </div>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <div id="new_lucky_draw_wrapper_back">
+                                            <p id="new_lucky_draw">CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-2.png" />
                     </div>
-                    <div class="flip-box-back">
-                        <div id="new_lucky_draw_wrapper_back">
-                            <p id="new_lucky_draw">CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
-                        </div>
-                    </div>
+                    <div></div>
+                    <p class="text-white text-center mt-3" style="font-size: 0.8rem; position: relative;"><span>Happy
+                            Chinese
+                            New Year 2022!
+                            Brought to you by <a href="https://www.websparks.sg/" class="text-white" target="_blank"
+                                style="position: inherit; display: unset;">Websparks.sg</a></span></p>
                 </div>
             </div>
-            <p class="text-white text-center" style="bottom: 0; font-size: 0.8rem;">
-                Happy Chinese New Year 2022<br />
-                Brought to you by <a href="https://www.websparks.sg/" class="text-white"
-                    target="_blank">Websparks.sg</a>
-            </p>
         </div>
-        <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-2.png" />
-    </div>
-
+    </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
@@ -298,9 +273,9 @@
                     if ($(ele).attr('step') === nextStep) {
                         $(ele).removeClass('d-none');
 
-                        if ($('#play span').hasClass('fa-volume-off')) {
-                            $('#play span').removeClass('fa-volume-off');
-                            $('#play span').addClass('fa-volume-up');
+                        if ($('#play').hasClass('pause')) {
+                            $('#play').removeClass('pause');
+                            $('#play').addClass('play');
                         }
 
                         if (nextStep === '11') return;
@@ -314,7 +289,8 @@
                             }, true);
                             audioElement.play();
 
-                            $('.flip-box-inner').removeClass('d-none');
+                            $('.flip-box-all').removeClass('d-none');
+                            $('.flip-box-all').addClass('d-flex flex-row');
                         } else {
                             audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
                             $('iframe').contents().find('video').each(function () {
@@ -329,15 +305,15 @@
             });
 
             $('#play').click(function () {
-                if ($('#play span').hasClass('fa-volume-off')) {
-                    $('#play span').removeClass('fa-volume-off');
-                    $('#play span').addClass('fa-volume-up');
+                if ($('#play').hasClass('pause')) {
+                    $('#play').removeClass('pause');
+                    $('#play').addClass('play');
                     $('iframe').contents().find('video').each(function () {
                         this.play();
                     });
                 } else {
-                    $('#play span').addClass('fa-volume-off');
-                    $('#play span').removeClass('fa-volume-up');
+                    $('#play').addClass('pause');
+                    $('#play').removeClass('play');
 
                     $('iframe').contents().find('video').each(function () {
                         this.pause();
@@ -358,5 +334,6 @@
             })
         });
     </script>
+</body>
 
 </html>

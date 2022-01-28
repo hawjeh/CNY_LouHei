@@ -74,6 +74,10 @@
             font-size: 2.5rem;
         }
 
+        .louhei_sg {
+            position: relative;
+        }
+
         .flip-box {
             background-color: transparent;
             width: 300px;
@@ -109,10 +113,20 @@
         }
 
         .flip-box-all {
-            margin-bottom: 1.8rem;
             position: absolute;
-            bottom: 20px;
+            bottom: 65px;
             background-image: linear-gradient(0deg, #c83838, transparent);
+        }
+
+        #footer {
+            font-size: 1.2rem;
+            position: relative;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        #footer img {
+            max-height: 45px;
         }
 
         @media (max-width: 425px) {
@@ -144,6 +158,24 @@
             .tiger_mascot {
                 width: 30%;
                 max-height: 150px;
+            }
+
+            .flip-box-all {
+                bottom: 70px;
+            }
+
+            #footer {
+                font-size: 0.8rem;
+            }
+
+            #footer img {
+                max-height: 30px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .flip-box-all {
+                bottom: 80px;
             }
         }
     </style>
@@ -203,7 +235,7 @@
                 </ul>
                 <div class="map" style="max-height:90vh">
                     <img src="assets/img/ws_tap.gif" step="0" id="tapme" class="louhei_sg position-absolute"
-                        alt="Tap Me!">
+                        alt="Tap Me!" style="z-index: 100;">
                     <img src="assets/img/ws_0.png" step="0" class="louhei_sg" alt="Happy Chinese New Year!">
                     <img src="assets/img/ws_1.gif" step="1" class="louhei_sg d-none" alt="Nian Nian You Yu!" />
                     <img src="assets/img/ws_2.gif" step="2" class="louhei_sg d-none" alt="Da Ji Da Li!" />
@@ -239,11 +271,10 @@
                         <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-2.png" />
                     </div>
                     <div></div>
-                    <p class="text-white text-center mt-3" style="font-size: 1.2rem; position: relative; padding: 1rem"><span>Happy
-                            Chinese
-                            New Year 2022!
-                            Brought to you by <a href="https://www.websparks.sg/" class="text-white" target="_blank"
-                                style="position: inherit; display: unset;"><img src="assets/img/logo_white.png" style="max-height: 45px;"/></a></span></p>
+                    <p class="text-white text-center mt-3" id="footer"><span>Happy Chinese New Year 2022! Brought to you
+                            by <a href="https://www.websparks.sg/" class="text-white" target="_blank"
+                                style="position: inherit; display: unset;"><img
+                                    src="assets/img/logo_white.png" /></a></span></p>
                 </div>
             </div>
         </div>

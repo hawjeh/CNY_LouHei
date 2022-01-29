@@ -39,51 +39,6 @@ img {
   transform: translate(-50%, -50%);
 }
 
-@media (min-width: 540px) {
-  #tapme {
-    max-height: 160px;
-    max-width: 160px;
-  }
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-    height: 100vh;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-  }
-
-  #tapme {
-    max-height: 200px;
-    max-width: 200px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-
-  #tapme {
-    max-height: 250px;
-    max-width: 250px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -149,19 +104,6 @@ img {
 
 .social li a:hover {
   background: linear-gradient(to bottom right, #fd4d00, #fd9b00);
-}
-
-@media (max-width: 1199px) {
-  .social {
-    position: relative;
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .social li {
-    margin: 0 0.25rem;
-  }
 }
 
 .fab {
@@ -230,14 +172,6 @@ img {
 .footer img {
   max-height: 30px;
 }
-@media (min-width: 576px) {
-  .footer {
-    font-size: 1.2rem;
-  }
-  .footer img {
-    max-height: 45px;
-  }
-}
 
 /* lucky number component */
 .lucky-number {
@@ -253,12 +187,6 @@ img {
 .tiger_mascot {
   max-width: 100px;
   max-height: 90px;
-}
-@media (min-width: 768px) {
-  .tiger_mascot {
-    max-width: 25%;
-    max-height: 100%;
-  }
 }
 /* luck number card in the middle */
 .lucky-number-bg {
@@ -276,6 +204,7 @@ img {
   transition: transform 1s;
   transform-style: preserve-3d;
   top: 0;
+  cursor: pointer;
 }
 /* flip side A and then side B */
 .lucky-number-flip-a,
@@ -302,7 +231,17 @@ img {
   font-size: 2rem;
 }
 
+@media (min-width: 540px) {
+  #tapme {
+    max-height: 160px;
+    max-width: 160px;
+  }
+}
+
 @media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
   .lucky-number-flip {
     width: 240px;
   }
@@ -312,10 +251,59 @@ img {
   .lucky-number-flip p.number {
     font-size: 2.5rem;
   }
+  .footer {
+    font-size: 1.2rem;
+  }
+  .footer img {
+    max-height: 45px;
+  }
 }
 
 @media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    height: 100vh;
+  }
   .lucky-number-flip {
     width: 40%;
+  }
+  #tapme {
+    max-height: 200px;
+    max-width: 200px;
+  }
+  .tiger_mascot {
+    max-width: 25%;
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  #tapme {
+    max-height: 250px;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .social {
+    right: -50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .social {
+    position: relative;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .social li {
+    margin: 0 0.25rem;
   }
 }

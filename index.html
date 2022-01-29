@@ -192,13 +192,15 @@
             // flip the lucky number and generate 4 digits
             var flip = true;
             $('#new_lucky_draw_wrapper').click(function () {
-                var rotate = flip ? 'rotateY(180deg)' : 'rotateY(0deg)';
-                var rotateFlip = flip ? 'rotateY(0deg)' : 'rotateY(180deg)';
-                $('.lucky-number-bg').css('transform', rotate);
-                $('.lucky-number-flip-inner').css('transform', rotateFlip);
-                flip = !flip;
-                var luckyNumber = Math.floor(1000 + Math.random() * 9000);
-                $('.lucky-number-flip p').addClass('number').hide().html(luckyNumber).fadeIn(800);
+                if (flip) {
+                    var rotate = flip ? 'rotateY(180deg)' : 'rotateY(0deg)';
+                    var rotateFlip = flip ? 'rotateY(0deg)' : 'rotateY(180deg)';
+                    $('.lucky-number-bg').css('transform', rotate);
+                    $('.lucky-number-flip-inner').css('transform', rotateFlip);
+                    flip = !flip;
+                    var luckyNumber = Math.floor(1000 + Math.random() * 9000);
+                    $('.lucky-number-flip p').addClass('number').hide().html(luckyNumber).fadeIn(800);
+                }
             })
         });
 
@@ -208,7 +210,7 @@
             var height = $(window).height() - $('.footer').outerHeight() - (4 * 16);
             $('.map').height(height);
           } else {
-            $('.map').css('height', '');
+            // $('.map').css('height', '');
           }
         });
     </script>

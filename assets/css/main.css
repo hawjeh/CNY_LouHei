@@ -292,6 +292,12 @@ img {
   }
 }
 
+@media (max-width: 425px) {
+  .louhei_sg {
+    max-height: 632px;
+  }
+}
+
 @media (max-width: 1199px) {
   .social {
     position: relative;

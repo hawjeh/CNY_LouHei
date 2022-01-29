@@ -210,7 +210,9 @@
             var height = $(window).height() - $('.footer').outerHeight() - (4 * 16);
             $('.map').height(height);
           } else {
-            $('.map').css('height', 'auto');
+            $('.map').css('height', '');
+            $('.louhei_sg:not(:first-child)').css('height', '');
+            $('.louhei_sg:not(:first-child)').css('max-height', '632px');
           }
         });
     </script>

@@ -293,8 +293,8 @@ img {
 }
 
 @media (max-width: 425px) {
-  .louhei_sg {
-    max-height: 632px;
+  .louhei_sg:not(:first-child) {
+    height: 316px !important;
   }
 }
 

@@ -207,8 +207,7 @@ img {
   cursor: pointer;
 }
 /* flip side A and then side B */
-.lucky-number-flip-a,
-.lucky-number-flip-b {
+.lucky-number-flip-number {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -219,9 +218,6 @@ img {
   color: white;
   border-radius: 5px;
   backface-visibility: hidden;
-}
-.lucky-number-flip-b {
-  transform: rotateY(180deg);
 }
 .lucky-number-flip p {
   margin: 0;

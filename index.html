@@ -93,11 +93,8 @@
                         <div class="lucky-number-flip" id="new_lucky_draw_wrapper">
                           <img src="./assets/img/lucky_number/button.png" class="lucky-number-bg" />
                           <div class="lucky-number-flip-inner">
-                            <div class="lucky-number-flip-a">
+                            <div class="lucky-number-flip-number">
                               <p>CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
-                            </div>
-                            <div class="lucky-number-flip-b">
-                              <p class="number">1234</p>
                             </div>
                           </div>
                         </div>
@@ -198,8 +195,11 @@
                     $('.lucky-number-bg').css('transform', rotate);
                     $('.lucky-number-flip-inner').css('transform', rotateFlip);
                     flip = !flip;
+                    $('.lucky-number-flip p').addClass('d-none');
                     var luckyNumber = Math.floor(1000 + Math.random() * 9000);
-                    $('.lucky-number-flip p').addClass('number').hide().html(luckyNumber).fadeIn(800);
+                    setTimeout(() => {
+                        $('.lucky-number-flip p').removeClass('d-none').addClass('number').html(luckyNumber).fadeIn(800);
+                    }, 800);
                 }
             })
         });
@@ -210,7 +210,7 @@
             var height = $(window).height() - $('.footer').outerHeight() - (4 * 16);
             $('.map').height(height);
           } else {
-            // $('.map').css('height', '');
+            $('.map').css('height', 'auto');
           }
         });
     </script>

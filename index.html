@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Websparks | Chinese New Year 2022!</title>
-    
+    <title>Websparks | Chinese New Year 2023!</title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta property="keywords" content="louhei sg, louhei, sg, chinese new year, chinese new year, happy tiger year, tiger year, websparks, websparks louhei, websparks louhei sg">
-    <meta property="description" content="Websparks Wish You a Happy Chinese New Year 2022! Huat Ah!">
-    <meta property="og:title" content="Websparks | Chinese New Year 2022!">
+    <meta property="keywords"
+        content="louhei sg, louhei, sg, chinese new year, chinese new year, happy rabbit year, rabbit year, websparks, websparks louhei, websparks louhei sg">
+    <meta property="description" content="Websparks Wish You a Happy Chinese New Year 2023! Huat Ah!">
+    <meta property="og:title" content="Websparks | Chinese New Year 2023!">
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Websparks Wish You a Happy Chinese New Year 2022! Huat Ah!">
+    <meta property="og:description" content="Websparks Wish You a Happy Chinese New Year 2023! Huat Ah!">
     <meta property="og:image" content="https://www.louhei.sg/assets/img/ws_0.png">
     <meta property="og:url" content="https://www.louhei.sg/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Google Tag Manager -->
@@ -89,22 +92,34 @@
                     <img src="assets/img/ws_10.gif" step="10" class="louhei_sg d-none" alt="Tian Tian Mi Mi!" />
                     <img src="assets/img/ws_11.gif" step="11" class="louhei_sg d-none" alt="Ready to Lou Hei!" />
                     <img src="assets/img/ws_12.gif" step="12" class="louhei_sg d-none" alt="HUAT AH!" />
+                    <div class="lucky-god d-none">
+                        <img class="img-fluid cny_god_mascot cny_mascot" src="./assets/img/god-of-wealth-1.png" />
+                    </div>
                     <div class="lucky-number d-none">
-                        <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-1.png" />
-                        <div class="lucky-number-flip" id="new_lucky_draw_wrapper">
-                          <img src="./assets/img/lucky_number/button.png" class="lucky-number-bg" />
-                          <div class="lucky-number-flip-inner">
-                            <div class="lucky-number-flip-number">
-                              <p>CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
+                        <img class="img-fluid cny_mascot" src="./assets/img/rabbit-greeting-1.png" />
+                        <div class="lucky-wrapper">
+                            <div class="lucky-number-flip" id="new_lucky_draw_wrapper">
+                                <img src="./assets/img/button.png" class="lucky-number-bg" />
+                                <div class="lucky-number-flip-inner">
+                                    <div class="lucky-number-flip-number">
+                                        <p>CLICK HERE FOR<br />YOUR LUCKY NUMBER</p>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
+                            <p class="lucky-number-flip-message mt-1 d-none">Here's your 4D number! <br />Share <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=louhei.sg" class="text-white"
+                                    target="_blank"
+                                    style="position: inherit; display: unset; text-decoration: underline;">this page</a>
+                                to huat
+                                now!</p>
                         </div>
-                        <img class="img-fluid tiger_mascot" src="./assets/img/lucky_number/Tiger-greeting-2.png" />
+                        <img class="img-fluid cny_mascot" src="./assets/img/rabbit-greeting-2.png" />
                     </div>
                 </div>
                 <p class="text-white text-center mt-3 footer">
-                  Happy Chinese New Year 2022! Brought to you by
-                  <a href="https://www.websparks.sg/" class="text-white" target="_blank" style="position: inherit; display: unset;"><img src="assets/img/logo_white.png" /></a>
+                    Happy Chinese New Year 2023! Brought to you by
+                    <a href="https://www.websparks.sg/" class="text-white" target="_blank"
+                        style="position: inherit; display: unset;"><img src="assets/img/WS-logo.png" /></a>
                 </p>
             </div>
         </div>
@@ -151,6 +166,17 @@
                             audioElement.play();
 
                             $('.lucky-number').removeClass('d-none');
+                            $('.lucky-god').removeClass('d-none');
+                            setInterval(() => {
+                                let img1 = './assets/img/god-of-wealth-1.png';
+                                let img2 = './assets/img/god-of-wealth-2.png';
+                                let currentImg = $('.cny_god_mascot').attr('src');
+                                if (currentImg === img1) {
+                                    $('.cny_god_mascot').attr('src', img2);
+                                } else {
+                                    $('.cny_god_mascot').attr('src', img1);
+                                }
+                            }, 800);
                         } else {
                             audioElement.src = 'assets/voice/ws_' + nextStep + '.mp3';
                             $('iframe').contents().find('video').each(function () {
@@ -200,19 +226,21 @@
                     var luckyNumber = Math.floor(1000 + Math.random() * 9000);
                     setTimeout(() => {
                         $('.lucky-number-flip p').removeClass('d-none').addClass('number').html(luckyNumber).fadeIn(800);
+                        $('.lucky-number-flip-message').removeClass('d-none');
+                        $('.lucky-wrapper').addClass('align-self-end');
                     }, 800);
                 }
             })
         });
 
         // resize the louhei window to fit nicely to screen size bigger than 1200
-        $(window).on('resize orientationchange load', function() {
-          if($(window).width() > 1200) {
-            var height = $(window).height() - $('.footer').outerHeight() - (4 * 16);
-            $('.map').height(height);
-          } else {
-            $('.map').css('height', '');
-          }
+        $(window).on('resize orientationchange load', function () {
+            if ($(window).width() > 1200) {
+                var height = $(window).height() - $('.footer').outerHeight() - (4 * 16);
+                $('.map').height(height);
+            } else {
+                $('.map').css('height', '');
+            }
         });
     </script>
 </body>

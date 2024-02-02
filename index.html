@@ -22,30 +22,17 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNM4W344Z6"></script>
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5C4R24');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NNM4W344Z6'); 
     </script>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5C4R24" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-    </noscript>
     <iframe src="assets/voice/ws_bg.mp3" allow="autoplay" class="d-none"></iframe>
     <main class="container py-3">
         <div class="row">

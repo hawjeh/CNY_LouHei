@@ -103,11 +103,20 @@
                         <img class="img-fluid cny_mascot" src="./assets/img/horse-right.png" />
                     </div>
                 </div>
-                <p class="text-white text-center mt-3 footer">
-                    Happy Chinese New Year 2026! Brought to you by
-                    <a href="https://www.websparks.sg/" class="text-white" target="_blank"
-                        style="position: inherit; display: unset;"><img src="assets/img/WS-logo.png" /></a>
-                </p>
+            </div>
+            <div class="col">
+                <div class="my-3 horse-gif d-none">
+                    <img src="./assets/img/horse_loop.gif" class="img-fluid" alt="Happy Chinese New Year 2026!" />
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <p class="text-white text-center mt-3 footer">
+                        Happy Chinese New Year 2026! Brought to you by
+                        <a href="https://www.websparks.sg/" class="text-white" target="_blank"
+                            style="position: inherit; display: unset;"><img src="assets/img/WS-logo.png" /></a>
+                    </p>
+                </div>
             </div>
         </div>
     </main>
@@ -217,6 +226,7 @@
                         $('.lucky-number-flip-message').removeClass('d-none');
                         $('.lucky-wrapper').addClass('align-self-end');
                     }, 800);
+                    $('.horse-gif').removeClass('d-none');
                 }
             })
         });

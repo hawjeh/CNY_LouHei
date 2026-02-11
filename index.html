@@ -233,11 +233,11 @@
 
         // resize the lohei window to fit nicely to screen size bigger than 1200
         $(window).on('resize orientationchange load', function () {
-            if ($(window).width() > 1200) {
+            if ($(window).width() > 1280) {
                 var height = $(window).height() - $('.footer').outerHeight() - (4 * 16);
-                $('.map').height(height);
+                $('.map').css('max-height', height + 'px');
             } else {
-                $('.map').css('height', '');
+                $('.map').css('max-height', '');
             }
         });
     </script>
